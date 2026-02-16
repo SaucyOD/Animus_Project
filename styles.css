@@ -11,12 +11,12 @@
     --background: #121212; 
     --surface: #1e1e1e;
     --primary: #6e2e88;
-    --accent: #b600d6;
+    --accent: #e024ff;
     --text-main: #ffffff;
     --text-sub: #878787;
 }
 
-#home {
+section {
     min-height: 100vh;
     background-color: var(--background);
     color: var(--text-main);
@@ -36,6 +36,24 @@ h1 {
     margin-bottom: 16px;
     color: #fff;
     text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    animation: fadeDown 1.5s cubic-bezier(0.25, 1, 0.5, 1) backwards;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    animation: fadeDown 1.5s cubic-bezier(0.25, 1, 0.5, 1) 0.15s backwards;
+}
+
+@keyframes fadeDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .text-accent {
@@ -140,7 +158,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(rgba(18, 18, 18, 0.75) 0%,rgba(18, 18, 18, 0.5) 50%, rgba(18, 18, 18, 0.75) 100%), url('assets/background-desktop.jpg');
+    background-image: linear-gradient(rgba(18, 18, 18, 0.6) 0%,rgba(18, 18, 18, 0.75) 50%, rgba(18, 18, 18, 0.6) 100%), url('assets/background-desktop.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -164,6 +182,7 @@ header {
     padding: 8px 12px 8px 24px;
     background-color: var(--surface);
     transition: border-color 300ms ease;
+    animation: fadeUp 1s cubic-bezier(0.25, 1, 0.5, 1) 0.3s backwards;
 }
 
 .search-bar:hover {
@@ -196,4 +215,15 @@ header {
 
 .search-bar button:active {
     transform: scale(0.9);
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
