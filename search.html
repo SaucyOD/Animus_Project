@@ -9,6 +9,7 @@
 </head>
 <body>
     <section id="gallery">
+
         <nav>
             <figure class="nav__logo">
                 <img class="logo__img" src="assets/Nexus-Logo.svg" alt="Logo">
@@ -22,10 +23,36 @@
                     <a class="nav__link--anchor link__hover-effect" href="#">Communities</a>
                 </li>
                 <li class="nav__link  click">
-                    <a class="nav__link--anchor nav__link--primary" href="#">Browse</a>
+                    <a class="nav__link--anchor nav__link--primary" href="search.html">Browse</a>
                 </li>
             </ul>
         </nav>
+
+        <header class="banner">
+
+            <div class="container">
+                <h1 class="banner__title">Browse <span class="text-accent">Animus</span></h1>
+                
+                <div class="search-bar">
+                    <input class="search-bar__input" type="text" placeholder="Search anime...">
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="search__tools wrapper">
+            <h2 class="search-results__text">Search results for: <span id="search-query">"..."</span></h2>
+            <button class="filter-btn click">
+                <i class="fa-solid fa-filter"></i> Filter
+            </button>
+        </div>
+        
+        <main class="results-container wrapper">
+            
+        </main>
     </section>
 </body>
 </html>
