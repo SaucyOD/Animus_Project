@@ -16,10 +16,14 @@
     --text-sub: #878787;
 }
 
-section {
+body {
     min-height: 100vh;
     background-color: var(--background);
     color: var(--text-main);
+}
+
+#home {
+    min-height: 100vh;
 }
 
 .container {
@@ -219,7 +223,7 @@ header {
     }
 }
 
-/* --- Banner --- */
+/* SEARCH PAGE */
 
 header, .banner {
     display: flex;
@@ -232,6 +236,8 @@ header, .banner {
     position: relative;
 }
 
+
+
 .banner {
     height: 35vh; 
     min-height: 250px;
@@ -242,6 +248,8 @@ header, .banner {
     font-size: 42px;
     margin-bottom: 24px;
 }
+
+/* --- SEARCH TOOLS --- */
 
 .wrapper {
     width: 100%;
@@ -283,4 +291,64 @@ header, .banner {
 .filter-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
+}
+
+/* --- GALLERY --- */
+
+.results__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-bottom: 40px;
+}
+
+.gallery__card {
+    width: calc(100% / 4);
+    display: flex;
+    height: 300px;
+    border: 1px solid #333;
+    border-radius: 12px;
+    background-color: var(--surface);
+    transition: all 300ms ease;
+}
+
+.gallery__card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.card__poster {
+    position: relative;
+    width: 100px;
+}
+
+.anime__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card__rating {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+}
+
+.card__details {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 8px;
+}
+
+.card__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: auto; 
+}
+
+.card__stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--text-sub)
 }
