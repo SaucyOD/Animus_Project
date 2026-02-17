@@ -298,14 +298,15 @@ header, .banner {
 .results__gallery {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 24px;
     padding-bottom: 40px;
 }
 
 .gallery__card {
-    width: calc(100% / 4);
+    width: calc(100% / 3 - 48px);
     display: flex;
-    height: 300px;
+    height: 250px;
     border: 1px solid #333;
     border-radius: 12px;
     background-color: var(--surface);
@@ -319,12 +320,15 @@ header, .banner {
 
 .card__poster {
     position: relative;
-    width: 100px;
+    width: 50%;
+    flex-shrink: 0;
 }
 
 .anime__img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .card__rating {
@@ -336,6 +340,7 @@ header, .banner {
 .card__details {
     display: flex;
     flex-direction: column;
+    width: 50%;
     padding: 12px 8px;
 }
 
