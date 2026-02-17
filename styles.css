@@ -357,7 +357,7 @@ header, .banner {
     background: rgba(110, 46, 136, 0.2);
     border: 1px solid var(--primary);
     color: var(--accent);
-    paddinG: 4px 8px;
+    padding: 4px 8px;
     border-radius: 4px;
     font-weight: 500;
     font-size: 12px;
@@ -410,6 +410,7 @@ header, .banner {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
+    overflow: hidden;
 }
 
 .genre {

@@ -119,7 +119,7 @@ function animeHTML(anime) {
                         <div class="card__genres">${anime.genres.slice(0, 3).map(genre => `<span class="genre">${genre.name}</span>`).join('')}</div>
                     </div>
                 </div>
-            </div>`
+            </a>`
 }
 
 renderAnime()
