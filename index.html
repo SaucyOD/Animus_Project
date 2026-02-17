@@ -22,7 +22,7 @@
                     <a class="nav__link--anchor link__hover-effect" href="#">Home</a>
                 </li>
                 <li class="nav__link">
-                    <a class="nav__link--anchor link__hover-effect" href="#">Communities</a>
+                    <a class="nav__link--anchor link__hover-effect" href="#" onclick="alert('Feature not implemented yet.'); return false;">Communities</a>
                 </li>
                 <li class="nav__link  click">
                     <a class="nav__link--anchor nav__link--primary" href="search.html" target="_blank">Browse</a>
@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="search-bar">
-                    <input class="search-bar__input" type="text" placeholder="Search by title, studio, or genre...">
+                    <input class="search-bar__input" type="text" placeholder="Search for an anime...">
                     <button>
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
@@ -45,6 +45,16 @@
             </div>
         </header>
     </section>
+    <script>
+    const homeSearchInput = document.querySelector('.search-bar__input');
+    
+    homeSearchInput.addEventListener("keyup", (event) => {
+        if (event.key === "Enter") {
+            const word = event.target.value;
+            window.location.href = `search.html?query=${word}`;
+        }
+    });
+</script>
 </body>
 
 </html>

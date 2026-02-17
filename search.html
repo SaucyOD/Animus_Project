@@ -20,7 +20,7 @@
             </figure>
             <ul class="nav__links">
                 <li class="nav__link">
-                    <a class="nav__link--anchor link__hover-effect" href="#">Home</a>
+                    <a class="nav__link--anchor link__hover-effect" href="index.html" target="_blank">Home</a>
                 </li>
                 <li class="nav__link">
                     <a class="nav__link--anchor link__hover-effect" href="#">Communities</a>
@@ -50,9 +50,46 @@
 
         <div class="search__tools wrapper">
             <h2 class="search-results__text">Search results for: <span id="search-query">"..."</span></h2>
-            <button class="filter-btn click" onclick="openFilter()">
-                <i class="fa-solid fa-filter"></i> Filter
-            </button>
+            <div class="search-tools">
+
+                <div class="filter__container">
+                    <button class="filter-btn click" onclick="openFilter()" id="filter-btn-text">
+                        <i class="fa-solid fa-filter"></i> Filter
+                    </button>
+                    <div class="filter__modal" id="filter-modal">
+                        <div class="modal__header">
+                            <h3>Filter By</h3>
+                            <button class="close-modal click" onclick="closeFilter()">
+                                <i class="fa-solid fa-times"></i>
+                            </button>
+                        </div>
+                        <ul class="filter__list">
+                            <li class="filter__option click" onclick="applyFilter('', 'All')">All</li>
+                            <li class="filter__option click" onclick="applyFilter('tv', 'Shows')">Shows</li>
+                            <li class="filter__option click" onclick="applyFilter('movie', 'Movies')">Movies</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter__container">
+                    <button class="filter-btn click" onclick="openSort()" id="sort-btn-text">
+                        <i class="fa-solid fa-sort"></i> Sort
+                    </button>
+                    <div class="filter__modal" id="sort-modal">
+                        <div class="modal__header">
+                            <h3>Sort By</h3>
+                            <button class="close-modal click" onclick="closeSort()">
+                                <i class="fa-solid fa-times"></i>
+                            </button>
+                        </div>
+                        <ul class="filter__list">
+                            <li class="filter__option click" onclick="applySort('score', 'Highest Rated')">Highest Rated</li>
+                            <li class="filter__option click" onclick="applySort('rank', 'Ranking')">Ranking</li>
+                            <li class="filter__option click" onclick="applySort('episodes', 'Episode Count')">Episode Count</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
         <main class="results__gallery wrapper">
